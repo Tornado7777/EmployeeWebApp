@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <partial name="Partial/_styles" />
+</head>
+<body>
+    <partial name="Partial/_header" />
+    <div class="container">
+        @RenderBody()
+    </div>
+    <partial name="Partial/_footer" />
+    <partial name="Partial/_scripts" />
+    @await RenderSectionAsync("Scripts",required: false)
+</body>
+</html>
